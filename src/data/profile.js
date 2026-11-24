@@ -17,7 +17,7 @@ export const profile = {
     github: 'https://github.com/HARINI-MOHAN-KUMAR',
     leetcode: 'https://leetcode.com/u/HariniMohankumar/',
     classicPortfolio: 'https://portfoliowebsite-tau-teal.vercel.app/',
-    resume: '/Harini_Mohankumar_Resume.pdf',
+    resume: `${import.meta.env.BASE_URL}Harini_Mohankumar_Resume_Updated.pdf`,
   },
   summary:
     'I am a passionate student of Computer and Communication Engineering with expertise in Java, Python, web technologies, SQL, and foundational SAP. Through internships, I have built efficient, scalable, and user-friendly applications. Proficient in Git and familiar with agile practices, I thrive in collaborative environments and am eager to leverage technology to solve problems and deliver impactful solutions.',
