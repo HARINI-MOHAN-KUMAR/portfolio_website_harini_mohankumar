@@ -6,7 +6,7 @@ export const profile = {
   name: 'Harini Mohankumar',
   nameCaps: 'HARINI MOHANKUMAR',
   titleLine1: 'Computer & Communication Engineering',
-  titleLine2: 'Java & Full Stack Developer',
+  titleLine2: 'Java, AI & Full Stack Developer',
   location: 'Namakkal, Tamil Nadu',
   phone: '+91 9789137397',
   phoneHref: 'tel:+919789137397',
@@ -22,7 +22,7 @@ export const profile = {
   summary:
     'I am a passionate student of Computer and Communication Engineering with expertise in Java, Python, web technologies, SQL, and foundational SAP. Through internships, I have built efficient, scalable, and user-friendly applications. Proficient in Git and familiar with agile practices, I thrive in collaborative environments and am eager to leverage technology to solve problems and deliver impactful solutions.',
   intro:
-    'Java and Full Stack developer building efficient, scalable and user-friendly applications.',
+    'AI and Full Stack developer building efficient, scalable and user-friendly applications.',
   interests: ['Java', 'Python', 'Web technologies', 'SQL', 'Foundational SAP'],
   goal:
     'Eager to leverage technology to solve problems and deliver impactful solutions — while growing in collaborative, agile teams.',
@@ -183,6 +183,76 @@ export const projects = [
       'Built backend APIs using Flask and integrated with a database for secure data handling.',
     ],
   },
+  {
+    id: 'skill-barter',
+    index: '04',
+    name: 'SkillBarter',
+    subtitle: 'Peer-to-Peer Skill Exchange Platform',
+    github:
+      'https://github.com/HARINI-MOHAN-KUMAR/SkillBarter-A-Digital-Platform-for-Mutual-Skill-Development-and-Knowledge-Exchange',
+    accent: '#22c55e',
+    accent2: '#14b8a6',
+    tagline: 'A digital platform for matching learners and mentors to exchange skills.',
+    problem:
+      'Learners often struggle to find suitable peers who have complementary skills and can support mutual, practical learning.',
+    solution:
+      'A peer-to-peer skill exchange platform that matches users based on the skills they can teach and learn, with real-time chat and gamified progress tracking.',
+    workflow: [
+      'Create a learner or mentor profile',
+      'List teaching and learning skills',
+      'Find relevant peer matches',
+      'Connect through real-time chat',
+      'Earn badges and track progress',
+    ],
+    tech: ['React', 'Vite', 'Flask', 'MongoDB', 'Socket.IO', 'JWT'],
+    features: [
+      'Profile and skill management for teaching and learning',
+      'Skill-similarity matching to find relevant peers',
+      'Real-time private chat using Socket.IO',
+      'Points, badges, and leaderboard-based gamification',
+      'JWT authentication and environment-based configuration',
+    ],
+    contribution: [
+      'Built a full-stack peer-to-peer platform using React, Flask, and MongoDB.',
+      'Implemented skill matching, authentication, real-time chat, and gamified progress features.',
+      'Designed and integrated REST APIs with the Vite frontend and MongoDB Atlas data store.',
+    ],
+  },
+  {
+    id: 'govguide-ai',
+    index: '05',
+    name: 'GovGuide AI',
+    subtitle: 'AI-Powered Government Scheme Assistant',
+    github:
+      'https://github.com/HARINI-MOHAN-KUMAR/final_year_project_gov_ai/tree/main/govguide-ai',
+    accent: '#f59e0b',
+    accent2: '#ef4444',
+    tagline: 'Helps citizens discover schemes, check eligibility, and track applications.',
+    problem:
+      'Citizens need to navigate complex government scheme information, eligibility rules, document requirements, and application processes.',
+    solution:
+      'A multilingual AI advisory platform that combines rule-based and machine-learning eligibility checks, OCR document parsing, RAG-grounded chat, and application tracking.',
+    workflow: [
+      'Browse or search government schemes',
+      'Complete the citizen profile',
+      'Check eligibility and upload documents',
+      'Ask the AI assistant for guidance',
+      'Track applications and scheme updates',
+    ],
+    tech: ['Python', 'FastAPI', 'React', 'SQLAlchemy', 'RAG', 'OCR', 'ML'],
+    features: [
+      'Discovery of 50-plus central and state government schemes',
+      'Hybrid rule-based and machine-learning eligibility checks',
+      'OCR parsing for Aadhaar, income, and ration documents',
+      'RAG-grounded AI chat and multilingual support',
+      'Citizen profiles, application tracking, and an admin dashboard',
+    ],
+    contribution: [
+      'Developed a final-year full-stack AI platform for discovering Indian government schemes and understanding eligibility.',
+      'Integrated FastAPI services with React, SQLAlchemy, OCR processing, a machine-learning eligibility model, and RAG-based assistance.',
+      'Built secure authentication and application workflows, and validated the backend with 81 automated tests.',
+    ],
+  },
 ]
 
 export const experience = [
@@ -194,12 +264,16 @@ export const experience = [
     place: '',
     focus: 'Enterprise Java & Test Automation',
     project: 'Automation Test Framework',
+    summary:
+      'Worked on building a reusable Java automation foundation for scalable test execution across enterprise modules.',
     github:
       'https://github.com/HARINI-MOHAN-KUMAR/Infosys_Springboot_Automation_Test',
     points: [
       'Designed and developed a modular Automation Test Framework from scratch using Java, enabling reusable and scalable test execution across multiple modules.',
+      'Applied a modular structure to make test components easier to maintain, reuse, and extend.',
+      'Used Spring Boot concepts and automation practices to support reliable and repeatable test workflows.',
     ],
-    tech: ['Java', 'Test Automation'],
+    tech: ['Java', 'Spring Boot', 'Test Automation'],
   },
   {
     id: 'nxt',
@@ -209,9 +283,14 @@ export const experience = [
     place: 'Coimbatore, Tamil Nadu',
     focus: 'Full Stack Web Development',
     project: '',
+    summary:
+      'Contributed to building responsive web application interfaces using core front-end technologies, reusable page structures, and user-focused design principles.',
     github: '',
     points: [
       'Developed web applications using HTML5, CSS3, and JavaScript, creating simple and user-friendly web pages.',
+      'Built structured page layouts and responsive components, using semantic HTML and CSS to provide consistent presentation across screen sizes.',
+      'Added JavaScript-based interactions to improve usability and create more dynamic, engaging web experiences.',
+      'Reviewed interface behavior and refined visual details to improve clarity, navigation, and overall user experience.',
     ],
     tech: ['HTML5', 'CSS3', 'JavaScript'],
   },
@@ -223,10 +302,14 @@ export const experience = [
     place: 'Bangalore (Remote)',
     focus: 'Python, Data Analysis, Machine Learning',
     project: '',
+    summary:
+      'Completed an applied remote data science internship focused on transforming data into insights and building, evaluating, and documenting machine learning models.',
     github: '',
     points: [
       'Built, trained, and evaluated classification models using Scikit-learn, optimizing hyperparameters to improve model accuracy.',
-      'Documented findings and model performance metrics in structured reports for internal review.',
+      'Performed data preparation and exploratory analysis using Python to understand patterns and prepare datasets for model development.',
+      'Compared model performance using appropriate evaluation metrics and tuned parameters to improve predictive accuracy.',
+      'Documented findings, model choices, performance results, and conclusions in structured reports for internal review.',
     ],
     tech: ['Python', 'Scikit-learn', 'Data Analysis', 'Machine Learning'],
   },

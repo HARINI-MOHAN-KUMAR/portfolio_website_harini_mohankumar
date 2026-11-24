@@ -691,6 +691,12 @@ h3 {
   color: var(--muted);
   margin-bottom: 8px;
 }
+.tl-summary {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
 .bullets {
   display: grid;
   gap: 8px;

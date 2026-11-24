@@ -284,6 +284,7 @@ export function Experience() {
                       </>
                     )}
                   </p>
+                  {e.summary && <p className="tl-summary">{e.summary}</p>}
                   <ul className="bullets">
                     {e.points.map((p) => (
                       <li key={p}>{p}</li>
@@ -464,7 +465,7 @@ export function Contact() {
           Let’s connect.
         </h2>
         <p className="body body--center" data-reveal>
-          Open to opportunities, collaborations and conversations about Java and full stack development.
+          Open to opportunities, collaborations and conversations about Java, AI and full stack development.
         </p>
 
         <div className="contact-main" data-reveal>

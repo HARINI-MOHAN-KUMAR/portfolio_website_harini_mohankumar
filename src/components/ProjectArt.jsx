@@ -172,8 +172,90 @@ export function BotArt() {
   )
 }
 
+export function SkillBarterArt() {
+  return (
+    <svg viewBox="0 0 400 240" role="img" aria-label="SkillBarter illustration: learners exchanging skills">
+      <defs>
+        <linearGradient id="sb-bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#063b35" />
+          <stop offset="1" stopColor="#0f2f5f" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="240" fill="url(#sb-bg)" />
+      <g stroke="#2dd4bf" strokeOpacity=".14">
+        {[50, 100, 150, 200, 250, 300, 350].map((x) => (
+          <line key={x} x1={x} x2={x} y1="0" y2="240" />
+        ))}
+      </g>
+      {[
+        ['Teach', 82],
+        ['Exchange', 200],
+        ['Learn', 318],
+      ].map(([label, x], i) => (
+        <g key={label} transform={`translate(${x - 48},78)`}>
+          <circle cx="48" cy="38" r="34" fill={i === 1 ? '#14b8a6' : '#115e59'} stroke="#99f6e4" strokeOpacity=".7" />
+          <text x="48" y="44" textAnchor="middle" fill="#ecfeff" fontSize="13" fontFamily="sans-serif" fontWeight="600">
+            {label}
+          </text>
+        </g>
+      ))}
+      <path d="M128 116 C160 70 176 70 200 116" fill="none" stroke="#5eead4" strokeWidth="3" strokeDasharray="6 5" />
+      <path d="M248 116 C280 70 296 70 318 116" fill="none" stroke="#5eead4" strokeWidth="3" strokeDasharray="6 5" />
+      <g transform="translate(110,176)">
+        <rect width="180" height="32" rx="16" fill="#052e2b" stroke="#14b8a6" strokeOpacity=".6" />
+        <text x="90" y="21" textAnchor="middle" fill="#ccfbf1" fontSize="12" fontFamily="monospace">
+          Skill match · Chat
+        </text>
+      </g>
+    </svg>
+  )
+}
+
+export function GovGuideArt() {
+  return (
+    <svg viewBox="0 0 400 240" role="img" aria-label="GovGuide AI illustration: government schemes and an AI assistant">
+      <defs>
+        <linearGradient id="gg-bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#3a2508" />
+          <stop offset="1" stopColor="#442d55" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="240" fill="url(#gg-bg)" />
+      <g transform="translate(32,36)">
+        <rect width="210" height="150" rx="16" fill="#241a32" stroke="#f59e0b" strokeOpacity=".55" />
+        <text x="18" y="28" fill="#fde68a" fontSize="14" fontFamily="sans-serif" fontWeight="600">
+          Government schemes
+        </text>
+        {[54, 82, 110].map((y, i) => (
+          <g key={y}>
+            <rect x="18" y={y} width="174" height="20" rx="6" fill={i === 0 ? '#78350f' : '#3b2b4d'} />
+            <circle cx="30" cy={y + 10} r="4" fill={i === 0 ? '#fbbf24' : '#a78bfa'} />
+            <rect x="42" y={y + 6} width={92 - i * 14} height="8" rx="4" fill="#fde68a" fillOpacity=".55" />
+          </g>
+        ))}
+      </g>
+      <g transform="translate(278,58)">
+        <circle cx="48" cy="48" r="48" fill="#ef4444" fillOpacity=".18" stroke="#fbbf24" strokeOpacity=".7" />
+        <circle cx="48" cy="48" r="30" fill="#7c2d12" stroke="#f59e0b" />
+        <circle cx="38" cy="42" r="4" fill="#fff7ed" />
+        <circle cx="58" cy="42" r="4" fill="#fff7ed" />
+        <path d="M34 58 Q48 70 62 58" fill="none" stroke="#fff7ed" strokeWidth="3" strokeLinecap="round" />
+      </g>
+      <g transform="translate(260,168)">
+        <rect width="116" height="34" rx="17" fill="#241a32" stroke="#ef4444" strokeOpacity=".5" />
+        <text x="58" y="22" textAnchor="middle" fill="#fecaca" fontSize="11" fontFamily="monospace">
+          AI eligibility
+        </text>
+      </g>
+    </svg>
+  )
+}
+
 export default function ProjectArt({ id }) {
   if (id === 'cloud-iq') return <CloudArt />
   if (id === 'doctor-booking') return <DoctorArt />
+  if (id === 'bank-bot') return <BotArt />
+  if (id === 'skill-barter') return <SkillBarterArt />
+  if (id === 'govguide-ai') return <GovGuideArt />
   return <BotArt />
 }
