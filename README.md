@@ -34,7 +34,7 @@ vercel --prod   # production
 ```
 
 ## Updating the resume
-Replace `public/Harini_Mohankumar_Resume.pdf` with the new file (keep the same name).
+Replace `public/Harini_Mohankumar_Resume_Updated.pdf` with the new file (keep the same name).
 
 ## Structure
 ```
