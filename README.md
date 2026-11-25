@@ -36,6 +36,13 @@ vercel --prod   # production
 ## Updating the resume
 Replace `public/Harini_Mohankumar_Resume_Updated.pdf` with the new file (keep the same name).
 
+## Brand assets
+- `public/hm-mark.svg` — standalone transparent HM symbol.
+- `public/hm-navbar.svg` — rounded-square navbar mark.
+- `public/harini-mohan-logo.svg` — transparent HM and HARINI MOHAN lockup.
+- `public/favicon.svg` — compact browser favicon.
+- The website loader animates the HM mark with a drawn-line and orbit treatment.
+
 ## Structure
 ```
 src/

@@ -133,11 +133,26 @@ export function Loader({ done }) {
   return (
     <div className={`loader ${done ? 'loader--out' : ''}`} role="status" aria-live="polite">
       <div className="loader__mark" aria-hidden="true">
-        <span />
-        <span />
-        <span />
+        <svg viewBox="0 0 100 100" fill="none">
+          <defs>
+            <linearGradient id="loader-hm" x1="20" y1="20" x2="90" y2="80" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#65E6CE" />
+              <stop offset="1" stopColor="#42CFF4" />
+            </linearGradient>
+          </defs>
+          <circle className="loader__orbit" cx="50" cy="50" r="46" />
+          <path
+            className="loader__glyph"
+            d="M20 20V80M20 50H50M50 20V80M50 20L70 80L90 20V80"
+            pathLength="100"
+            stroke="url(#loader-hm)"
+            strokeWidth="8"
+            strokeLinecap="butt"
+            strokeLinejoin="round"
+          />
+        </svg>
       </div>
-      <p className="loader__name">HARINI — BEYOND THE SCREEN</p>
+      <p className="loader__name">HARINI MOHAN</p>
       <div className="loader__track" aria-hidden="true">
         <div className="loader__fill" style={{ transform: `scaleX(${pct / 100})` }} />
       </div>
@@ -169,7 +184,8 @@ export function Nav({ active, theme, onToggleTheme }) {
     <>
       <header className="nav">
         <a href="#home" className="nav__logo" onClick={go('home')} aria-label="Harini Mohankumar — back to start">
-          <span>H</span>M
+          <img src={`${import.meta.env.BASE_URL}hm-navbar.svg`} alt="" />
+          <span>HARINI MOHAN</span>
         </a>
         <nav className="nav__links" aria-label="Primary">
           {sections.slice(1).map((s) => (

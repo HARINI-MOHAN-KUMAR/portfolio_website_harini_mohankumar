@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 112" fill="none">
+  <defs>
+    <linearGradient id="hm" x1="20" y1="20" x2="90" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20BFAF"/>
+      <stop offset="1" stop-color="#159CCB"/>
+    </linearGradient>
+  </defs>
+  <path d="M20 20V80M20 50H50M50 20V80M50 20L70 80L90 20V80" stroke="url(#hm)" stroke-width="8" stroke-linecap="butt" stroke-linejoin="round"/>
+  <text x="126" y="61" fill="#101A37" font-family="'Space Grotesk', 'Arial', sans-serif" font-size="27" font-weight="700" letter-spacing="3.2">HARINI MOHAN</text>
+</svg>

@@ -948,17 +948,22 @@ h3 {
 .nav__logo {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.03em;
+  font-size: 0.88rem;
+  letter-spacing: 0.13em;
   display: inline-flex;
-  padding: 6px 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--panel);
-  backdrop-filter: blur(10px);
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+.nav__logo img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  box-shadow: 0 6px 22px rgba(8, 18, 38, 0.2);
 }
 .nav__logo span {
-  color: var(--accent);
+  color: var(--text);
 }
 .nav__links {
   display: flex;
@@ -1143,21 +1148,32 @@ html.has-cursor button {
   pointer-events: none;
 }
 .loader__mark {
-  display: flex;
-  gap: 8px;
+  width: 88px;
+  height: 88px;
+  filter: drop-shadow(0 0 18px color-mix(in srgb, var(--accent) 25%, transparent));
 }
-.loader__mark span {
-  width: 10px;
-  height: 36px;
-  border-radius: 6px;
-  background: linear-gradient(var(--accent), var(--accent-2));
-  animation: bar 1.1s ease-in-out infinite;
+.loader__mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.loader__mark span:nth-child(2) { animation-delay: 0.15s; }
-.loader__mark span:nth-child(3) { animation-delay: 0.3s; }
-@keyframes bar {
-  0%, 100% { transform: scaleY(0.4); opacity: 0.5; }
-  50% { transform: scaleY(1); opacity: 1; }
+.loader__orbit {
+  transform-origin: 50px 50px;
+  stroke: color-mix(in srgb, var(--accent) 42%, transparent);
+  stroke-width: 1;
+  stroke-dasharray: 1 8;
+  animation: orbit 8s linear infinite;
+}
+.loader__glyph {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-mark 1.6s cubic-bezier(0.6, 0, 0.3, 1) infinite alternate;
+}
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+@keyframes draw-mark {
+  to { stroke-dashoffset: 0; }
 }
 .loader__name {
   font-family: var(--font-mono);
